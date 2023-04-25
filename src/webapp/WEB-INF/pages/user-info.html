@@ -13,11 +13,11 @@
     <form action="#" th:action="@{/saveUser}" method="post" th:object="${user}">
         <input type="hidden" th:field="*{id}">
 
-        Name <input type="text" th:field="*{firstName}">
+        <label>Name <input type="text" pattern="[A-Za-zА-Яа-яЁё]{1,32}" th:field="*{firstName}"></label>
         <br><br>
-        Last Name <input type="text" th:field="*{lastName}">
+        <label>Last Name <input type="text" pattern="[A-Za-zА-Яа-яЁё]{1,32}" th:field="*{lastName}"></label>
         <br><br>
-        E-mail <input type="text" th:field="*{email}">
+        <label>E-mail <input type="email" th:field="*{email}"></label>
 
         <input type="submit" value="OK">
     </form>
