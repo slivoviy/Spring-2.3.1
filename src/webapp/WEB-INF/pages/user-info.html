@@ -10,7 +10,7 @@
 <h2>User Info</h2>
 
 <div>
-    <form action="#" th:action="@{/saveUser}" th:object="${user}">
+    <form action="#" th:action="@{/saveUser}" method="post" th:object="${user}">
         <input type="hidden" th:field="*{id}">
 
         Name <input type="text" th:field="*{firstName}">
